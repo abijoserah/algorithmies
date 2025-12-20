@@ -11,3 +11,14 @@ Contraintes
     •	Pas de matrice 2D complète
     •	Les espaces comptent comme caractères*/
 
+
+
+
+encode("WE ARE DISCOVERED", 3)
+// "WECRLTEERDSOEEAIVD"
+
+decode("WECRLTEERDSOEEAIVD", 3)
+// "WE ARE DISCOVERED"
+
+encode("HELLO", 2) // "HLOEL"
+decode("HLOEL", 2) // "HELLO"
