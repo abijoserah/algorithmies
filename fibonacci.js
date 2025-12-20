@@ -7,6 +7,21 @@ Contraintes
     •	Pas de récursion naïve
     •	Résultat exact (BigInt)*/
 
+
+function fib(n) {
+    function helper(n) {
+        if (n === 0n) return [0n, 1n];
+
+        const [a, b] = helper(n / 2n);
+        const c = a * (2n * b - a);
+        const d = a * a + b * b;
+
+        return n % 2n === 0n ? [c, d] : [d, c + d];
+    }
+
+    return helper(BigInt(n))[0];
+}
+
 fib(0)   // 0n
 fib(1)   // 1n
 fib(10)  // 55n
